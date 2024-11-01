@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 10px 20px;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a, .social-links img {
+    text-decoration: none;
+    color: black;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.hero {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.buttons.button {
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.button.primary {
+    background-color: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.button.secondary {
+    background-color: gray;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.social-banner {
+    background: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.case-studies, .side-projects, .recent-writing {
+    padding: 40px 20px;
+}
+
+.social-icons img, .footer-social-links img {
+    gap: 30px;
+    height: 20px;
+}
+
+footer {
+    background: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
