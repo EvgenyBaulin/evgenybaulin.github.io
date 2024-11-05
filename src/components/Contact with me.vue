@@ -53,9 +53,7 @@ export default {
     <input type = "text" v-model = "user_message" placeholder = "Your message">
     <input type = "email" v-model = "user_email" placeholder = "Email">
     <input type = "text" v-model = "user_telegram" placeholder = "Telegram">
-
     <p>{{ error }}</p>
-
     <button @click = "send_Data()">Send</button>
   </div>
 </template>

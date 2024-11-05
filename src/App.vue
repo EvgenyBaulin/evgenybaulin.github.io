@@ -12,6 +12,9 @@ export default {
   <ContactWithMe/>
   <!--@click обработка клика-->
   <!--@mouseenter обработка того, когда мышка просто наводится-->
+  <h1>
+    Test massage!
+  </h1>
 </template>
 
 <style>

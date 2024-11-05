@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/evgenybaulin.github.io/', // Добавьте эту строку для указания пути
+    base: '/evgenybaulin.github.io/',
     plugins: [
         vue(),
     ],
