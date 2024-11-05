@@ -36,8 +36,9 @@ export default {
       this.users.push(user);
 
       try {
-        const response = await axios.post(`https://api.telegram.org/bot7647169031:AAGbHFVYakoQaSivO3KePxiENaD9EGz-bu8/sendMessage`, {
-          chat_id: '582677765',
+        const botToken = process.env.VUE_APP_TELEGRAM_BOT_TOKEN;
+        const chat_id = process.env.VUE_APP_TELEGRAM_chat_id;
+        const response = await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
           text: `New order from: ${user.name}\nHis Email: ${user.email}\nTitle: ${user.title}\nMessage: ${user.message}\nTelegram: ${user.telegram}`
         });
         console.log('Message sent:', response.data);
@@ -60,6 +61,7 @@ export default {
 
 <template>
   <div class = "contact">
+    <h3>If you are interested in my work and you want to order a project, you can contact me</h3>
     <div v-if = "formVisible">
       <div class = "input-row">
         <input type = "text" v-model = "user_name" placeholder = "Name">
@@ -80,13 +82,16 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .contact {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background: darkgray;
-  padding: 0;
+  align-items: center;
+  text-align: center;
+  background: rgba(64, 64, 208, 0.8);
+  border-radius: 45px;
+  padding: 30px;
+  width: 50%;
 }
 
 input {
