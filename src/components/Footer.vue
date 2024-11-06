@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
+
 <template>
   <footer>
     <div class = "social-links">
@@ -10,15 +16,10 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'Footer'
-}
-</script>
-
 <style scoped>
 .social-links img {
   gap: 70px;
   height: 50px;
 }
+
 </style>

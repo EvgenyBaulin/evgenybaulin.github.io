@@ -38,7 +38,7 @@ export default {
       try {
         const botToken = process.env.VUE_APP_TELEGRAM_BOT_TOKEN;
         const chat_id = process.env.VUE_APP_TELEGRAM_chat_id;
-        const response = await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        const response = await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {chat_id: chat_id,
           text: `New order from: ${user.name}\nHis Email: ${user.email}\nTitle: ${user.title}\nMessage: ${user.message}\nTelegram: ${user.telegram}`
         });
         console.log('Message sent:', response.data);
@@ -84,9 +84,8 @@ export default {
 
 <style scoped>
 .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
   text-align: center;
   background: rgba(64, 64, 208, 0.8);
   border-radius: 45px;

@@ -1,4 +1,9 @@
 <script>
+import PlayStation_Image from '../images/PlayStation Games Analysis.jpg';
+import Android_App_Image from '../images/PlayStation Games Analysis.jpg';
+import Tech_Impact_Image from '../images/PlayStation Games Analysis.jpg';
+import VK_Group_Image from '../images/PlayStation Games Analysis.jpg';
+
 export default {
   data() {
     return {
@@ -12,7 +17,16 @@ export default {
               'Optimized model performance with GridSearchCV, achieving high prediction accuracy\n' +
               'Implemented A/B testing to evaluate and refine model predictions',
           link_to_github: 'https://github.com/EvgenyBaulin/PlayStation_Games_Analysis',
-          image: '../images/PlayStation Games Analysis.jpg'
+          image: PlayStation_Image
+        },
+        {
+          title: 'Search for potential Jews among members of VK groups',
+          time_start: 'Sep 2024',
+          time_end: 'Sep 2024',
+          description: 'Collected data on the participants of VK groups dedicated to HSE\n' +
+              'Analyzed various parameters to determine potential members for the Jewish club of HSE',
+          link_to_github: 'https://github.com/EvgenyBaulin/Gathering_of_HSE_Jews',
+          image: VK_Group_Image
         },
         {
           title: 'Android app development',
@@ -23,27 +37,18 @@ export default {
               'Created a simple game as a sample application\n' +
               'Successfully presented and defended the developed application',
           link_to_github: '',
-          image: '../images/PlayStation Games Analysis.jpg'
+          image: Android_App_Image
         },
         {
           title: 'Exploring the impact of technology on society',
           time_start: 'Sep 2023',
           time_end: 'May 2024',
-          description: '',
-          link_to_github: 'Analyzed 210,000 news articles using NLP techniques\n' +
+          description: 'Analyzed 210,000 news articles using NLP techniques\n' +
               'Developed predictive models for societal technology impact\n' +
               'Evaluated economic, educational, and healthcare tech transformations\n' +
               'Proposed ethical frameworks for technology implementation',
-          image: '../images/PlayStation Games Analysis.jpg'
-        },
-        {
-          title: 'Search for potential Jews among members of VK groups',
-          time_start: 'Sep 2024',
-          time_end: 'Sep 2024',
-          description: 'I collected data on the participants of VK groups dedicated to HSE\n' +
-              'After the collection, I analyzed on a variety of parameters whether this person can be a potential member of the Jewish club of HSE or not',
           link_to_github: '',
-          image: '../images/PlayStation Games Analysis.jpg'
+          image: Tech_Impact_Image
         }
       ]
     }
@@ -56,11 +61,13 @@ export default {
     <h2>My Projects</h2>
     <div class = "project-list">
       <div class = "project" v-for = "project in projects" :key = "project.title">
-        <img :src = "project.image" :alt = "project.title" class = "project-image">
+        <img v-if = "project.image" :src = "project.image" :alt = "project.title"
+             class = "project-image">
         <h3>{{ project.title }}</h3>
         <p>{{ project.time_start }} - {{ project.time_end }}</p>
         <p>{{ project.description }}</p>
-        <a :href = "project.link_to_github" target = "_blank">View Project on GitHub</a>
+        <a v-if = "project.link_to_github" :href = "project.link_to_github"
+           target = "_blank">View Project on GitHub</a>
       </div>
     </div>
   </div>
@@ -72,6 +79,7 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .project-list {

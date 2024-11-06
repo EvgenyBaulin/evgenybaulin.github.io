@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'Header'
+}
+</script>
+
 <template>
   <header>
     <div class = "logo">Evgeny</div>
@@ -27,12 +33,6 @@
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  name: 'Header'
-}
-</script>
 
 <style scoped>
 .social-links img {

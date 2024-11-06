@@ -31,15 +31,11 @@ export default {
 <style>
 body {
   background: linear-gradient(to top, #4e4efd, turquoise);
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
 }
 
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  margin: 0;
+#app > * {
+  flex: 1;
 }
 </style>
